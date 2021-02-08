@@ -1,8 +1,1 @@
-#include "restapiconnections.h"
-
-restAPIConnections::restAPIConnections(QObject *parent) : QObject(parent)
-{
-
-}
-
-
+#include <restapiconnections.h>

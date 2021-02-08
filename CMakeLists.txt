@@ -31,13 +31,14 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Network REQUIRED)
 
 set(PROJECT_SOURCES
         src/main.cpp
-        src/restapiconnections.cpp
+#       src/restapiconnections.cpp
         inc/restapiconnections.h
         inc/stockInfos.h
         src/stockinfos.cpp
-        src/mainwindow.cpp
-        inc/mainwindow.h
-        ui/mainwindow.ui
+#      src/mainwindow.cpp
+#      inc/mainwindow.h
+        inc/apisInfo.h
+#       ui/mainwindow.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -56,9 +57,7 @@ else()
     endif()
 endif()
 
-add_library(robotrade SHARED
-    ${}
-)
+include_directories(./inc/)
 
 
 add_subdirectory(libs/CLI11/)
