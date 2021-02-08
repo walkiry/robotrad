@@ -57,7 +57,7 @@ else()
 endif()
 
 add_library(robotrade SHARED
-    ${PROJECT_SOURCES}
+    ${}
 )
 
 
