@@ -29,6 +29,8 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 set(PROJECT_SOURCES
         src/main.cpp
+        src/restapiconnections.cpp
+        inc/restapiconnections.h
         inc/stockInfos.h
         src/stockinfos.cpp
         src/mainwindow.cpp
