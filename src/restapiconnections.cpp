@@ -4,3 +4,5 @@ restAPIConnections::restAPIConnections(QObject *parent) : QObject(parent)
 {
 
 }
+
+

@@ -26,6 +26,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Network REQUIRED)
+
 
 set(PROJECT_SOURCES
         src/main.cpp
@@ -54,6 +56,12 @@ else()
     endif()
 endif()
 
+add_library(robotrade SHARED
+    ${PROJECT_SOURCES}
+)
+
+
 add_subdirectory(libs/CLI11/)
 
 target_link_libraries(robotrade PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(robotrade PRIVATE Qt${QT_VERSION_MAJOR}::Network)
